@@ -1,0 +1,28 @@
+name = "bee-web"
+# main = "_worker.ts"
+compatibility_date = "2024-09-28"
+workers_dev = false
+compatibility_flags = [ "nodejs_compat_v2" ]
+
+# [unsafe.metadata.observability]
+# enabled = true
+
+[observability]
+enabled = true
+
+[[build.upload]]
+format = "modules"
+
+[[routes]]
+pattern = "bee.leodeslf.com"
+zone_name = "leodeslf.com"
+custom_domain = true
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bee-db"
+database_id = "67df4abe-afb3-44be-9b84-203205447f09"
+preview_database_id = "DB"
